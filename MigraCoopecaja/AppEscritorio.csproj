@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16B33DE3-67C2-4257-BB4F-2E8570678EFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppEscritorio</RootNamespace>
+    <AssemblyName>CoopeBank</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\hefesto\CoopeBan\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\hefesto\CoopeBan\</InstallUrl>
+    <ApplicationRevision>127</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E42164FEEAEDE5E7661B948891595BFE14192B32</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AppEscritorio_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CoopeBank.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--<Reference Include="DevComponents.DotNetBar2, Version=12.2.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />-->
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SpreadsheetLight, Version=3.4.9.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SpreadsheetLight.3.4.9\lib\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministracionFormularios.cs" />
+    <Compile Include="ArchivosAdjuntos.cs" />
+    <Compile Include="Captacion\FrmCategoriaAhorros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmCategoriaAhorros.Designer.cs">
+      <DependentUpon>FrmCategoriaAhorros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Captacion\FrmCategoriaComercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmCategoriaComercial.Designer.cs">
+      <DependentUpon>FrmCategoriaComercial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Captacion\FrmConsultaTransSinpe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmConsultaTransSinpe.Designer.cs">
+      <DependentUpon>FrmConsultaTransSinpe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Captacion\FrmGestionExcedentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmGestionExcedentes.Designer.cs">
+      <DependentUpon>FrmGestionExcedentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Captacion\FrmLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmLiquidacion.Designer.cs">
+      <DependentUpon>FrmLiquidacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caso.cs" />
+    <Compile Include="Cobros\FrmCancCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobros\FrmCancCreditos.Designer.cs">
+      <DependentUpon>FrmCancCreditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cocatalogo.cs" />
+    <Compile Include="Colocaciones\FrmBuscarOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscarOperacion.Designer.cs">
+      <DependentUpon>FrmBuscarOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscarUsuariosPs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscarUsuariosPs.Designer.cs">
+      <DependentUpon>FrmBuscarUsuariosPs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscarVendedor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscarVendedor2.Designer.cs">
+      <DependentUpon>FrmBuscarVendedor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscaSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscaSucursal.Designer.cs">
+      <DependentUpon>FrmBuscaSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmConsultaIntercooperativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmConsultaIntercooperativa.Designer.cs">
+      <DependentUpon>FrmConsultaIntercooperativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmEliminarMedio_ICFMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmEliminarMedio_ICFMP.Designer.cs">
+      <DependentUpon>FrmEliminarMedio_ICFMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmMedioElectronico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmMedioElectronico.Designer.cs">
+      <DependentUpon>FrmMedioElectronico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmPlanillas.Designer.cs">
+      <DependentUpon>FrmPlanillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmVendedores.Designer.cs">
+      <DependentUpon>FrmVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXmlProrrogas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXmlProrrogas.Designer.cs">
+      <DependentUpon>FrmXmlProrrogas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXML_CambioClimatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXML_CambioClimatico.Designer.cs">
+      <DependentUpon>FrmXML_CambioClimatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXML_ICFMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXML_ICFMP.Designer.cs">
+      <DependentUpon>FrmXML_ICFMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXML_ICFPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmXML_ICFPC.Designer.cs">
+      <DependentUpon>FrmXML_ICFPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\GestorEstructuraPlanillas.cs" />
+    <Compile Include="ConstantesSistema.cs" />
+    <Compile Include="Credito.cs" />
+    <Compile Include="estructuras\datosXmlNominas.cs" />
+    <Compile Include="estructuras\estructuras.cs" />
+    <Compile Include="Captacion\FrmAhorros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmAhorros.Designer.cs">
+      <DependentUpon>FrmAhorros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmAvaluos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmAvaluos.Designer.cs">
+      <DependentUpon>FrmAvaluos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscaVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmBuscaVendedor.Designer.cs">
+      <DependentUpon>FrmBuscaVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmCambVend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmCambVend.Designer.cs">
+      <DependentUpon>FrmCambVend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colocaciones\FrmEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colocaciones\FrmEspeciales.Designer.cs">
+      <DependentUpon>FrmEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Captacion\FrmCertiCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacion\FrmCertiCredito.designer.cs">
+      <DependentUpon>FrmCertiCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmCargarPagosCGP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmCargarPagosCGP.Designer.cs">
+      <DependentUpon>FrmCargarPagosCGP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmInaAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmInaAsociados.Designer.cs">
+      <DependentUpon>FrmInaAsociados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmNominaCGP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmNominaCGP.Designer.cs">
+      <DependentUpon>FrmNominaCGP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmNuevoPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmNuevoPermiso.Designer.cs">
+      <DependentUpon>FrmNuevoPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmPermisos.Designer.cs">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmReingresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmReingresos.Designer.cs">
+      <DependentUpon>FrmReingresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts.cs" />
+    <Compile Include="Sugef\FrmActividadEconomica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sugef\FrmActividadEconomica.Designer.cs" />
+    <Compile Include="Sugef\FrmSeleccionarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sugef\FrmSeleccionarActividad.Designer.cs" />
+    <Compile Include="Sugef\FrmXML_TransaccionesMayores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sugef\FrmXML_TransaccionesMayores.Designer.cs" />
+    <Compile Include="Tesoreria\FrmConciBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\FrmConciBancos.Designer.cs">
+      <DependentUpon>FrmConciBancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSistema.cs" />
+    <EmbeddedResource Include="Captacion\FrmAhorros.resx">
+      <DependentUpon>FrmAhorros.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacion\FrmCategoriaAhorros.resx">
+      <DependentUpon>FrmCategoriaAhorros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacion\FrmCategoriaComercial.resx">
+      <DependentUpon>FrmCategoriaComercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacion\FrmConsultaTransSinpe.resx">
+      <DependentUpon>FrmConsultaTransSinpe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacion\FrmGestionExcedentes.resx">
+      <DependentUpon>FrmGestionExcedentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacion\FrmLiquidacion.resx">
+      <DependentUpon>FrmLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobros\FrmCancCreditos.resx">
+      <DependentUpon>FrmCancCreditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmAvaluos.resx">
+      <DependentUpon>FrmAvaluos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmBuscarOperacion.resx">
+      <DependentUpon>FrmBuscarOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmBuscarUsuariosPs.resx">
+      <DependentUpon>FrmBuscarUsuariosPs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmBuscarVendedor2.resx">
+      <DependentUpon>FrmBuscarVendedor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmBuscaSucursal.resx">
+      <DependentUpon>FrmBuscaSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmBuscaVendedor.resx">
+      <DependentUpon>FrmBuscaVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmCambVend.resx">
+      <DependentUpon>FrmCambVend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmConsultaIntercooperativa.resx">
+      <DependentUpon>FrmConsultaIntercooperativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmEliminarMedio_ICFMP.resx">
+      <DependentUpon>FrmEliminarMedio_ICFMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmEspeciales.resx">
+      <DependentUpon>FrmEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacion\FrmCertiCredito.resx">
+      <DependentUpon>FrmCertiCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmMedioElectronico.resx">
+      <DependentUpon>FrmMedioElectronico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmPlanillas.resx">
+      <DependentUpon>FrmPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmVendedores.resx">
+      <DependentUpon>FrmVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmXmlProrrogas.resx">
+      <DependentUpon>FrmXmlProrrogas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmXML_CambioClimatico.resx">
+      <DependentUpon>FrmXML_CambioClimatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmXML_ICFMP.resx">
+      <DependentUpon>FrmXML_ICFMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colocaciones\FrmXML_ICFPC.resx">
+      <DependentUpon>FrmXML_ICFPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmCargarPagosCGP.resx">
+      <DependentUpon>FrmCargarPagosCGP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmInaAsociados.resx">
+      <DependentUpon>FrmInaAsociados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmNominaCGP.resx">
+      <DependentUpon>FrmNominaCGP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmNuevoPermiso.resx">
+      <DependentUpon>FrmNuevoPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmPermisos.resx">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmReingresos.resx">
+      <DependentUpon>FrmReingresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sugef\FrmActividadEconomica.resx" />
+    <EmbeddedResource Include="Sugef\FrmSeleccionarActividad.resx" />
+    <EmbeddedResource Include="Sugef\FrmXML_TransaccionesMayores.resx" />
+    <EmbeddedResource Include="Tesoreria\FrmConciBancos.resx">
+      <DependentUpon>FrmConciBancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AppEscritorio_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Module.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Module32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileSql32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plani64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConstruirTabla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1461903249_data-error.ico" />
+    <None Include="Resources\refres.png" />
+    <None Include="Resources\procesar.png" />
+    <None Include="Resources\desca.gif" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\Incob.png" />
+    <None Include="Resources\DataBase.png" />
+    <None Include="Resources\AsoInactivo.png" />
+    <None Include="Resources\FondoPruebas.jpg" />
+    <Content Include="CatalogosBCCR.txt" />
+    <Content Include="VersionAplicativo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Vendedor.png" />
+    <None Include="Resources\Liqu.png" />
+    <None Include="Resources\dinero.png" />
+    <None Include="Resources\txtFile.png" />
+    <None Include="Resources\Planillas.png" />
+    <None Include="Resources\if_Process-Accept_49604.png" />
+    <None Include="Resources\FondoSistema6.jpg" />
+    <None Include="Resources\icono.ico" />
+    <None Include="Resources\retro.png" />
+    <None Include="Resources\move.png" />
+    <None Include="Resources\FondoSistema5.jpg" />
+    <None Include="Resources\FondoSistema2.jpg" />
+    <None Include="Resources\FondoListaV.jpg" />
+    <None Include="Resources\FondoLista2.jpg" />
+    <None Include="Resources\FondoLista.jpg" />
+    <None Include="Resources\FondoSistema4.jpg" />
+    <None Include="Resources\FondoSistema3.jpg" />
+    <None Include="Resources\FondoSistema.jpg" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\editclear.png" />
+    <None Include="Resources\espe.png" />
+    <None Include="Resources\especial.png" />
+    <None Include="Resources\none.png" />
+    <None Include="Resources\conta.png" />
+    <None Include="Resources\refresh2.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\support.png" />
+    <None Include="Resources\data.png" />
+    <None Include="Resources\Excel2.png" />
+    <None Include="Resources\Excel.png" />
+    <None Include="Resources\Lupa48.png" />
+    <None Include="Resources\Cargando.gif" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\analyzing.png" />
+    <None Include="Resources\AgregarCaso.png" />
+    <None Include="Resources\carpetaIn.png" />
+    <None Include="Resources\carpetaOut.png" />
+    <None Include="Resources\clip.png" />
+    <None Include="Resources\bdUpdate.png" />
+    <None Include="Resources\change.png" />
+    <Content Include="CoopeBank.ico" />
+    <Content Include="Resources\Configuration.png" />
+    <None Include="Resources\Nuevo.png" />
+    <None Include="Resources\MaxButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="1461903249_data-error.ico">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="CoopeBank.ico">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Datos">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DocumentFormat.OpenXml">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Logica">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Oracle.DataAccess">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Configuration.png">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="SkinSoft.VisualStyler">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SpreadsheetLight">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="VersionAplicativo.txt">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{4ddfd11f-ceec-48de-8b7c-a9cbc432ca43}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{e64cb9c8-7e29-45e2-800f-0fa870ad4305}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

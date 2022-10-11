@@ -1,0 +1,98 @@
+﻿//Catalogo Tipo Cetegoria crediticia
+*-TCC;1;Agricultura, ganadería, silvicultura, pesca, acuicultura, minas y canteras;N
+*-TCC;2;Industria y electricidad;N
+*-TCC;3;Actividades inmobiliarias y construcción;N
+*-TCC;4;Comercio;N
+*-TCC;5;Servicios, transporte y turismo;N
+*-TCC;6;Vehículos;N
+*-TCC;7;Consumo (no incluye vehículos ni tarjetas de crédito);N
+*-TCC;8;Sistema Banca Desarrollo 9 Comercio internacional;N
+*-TCC;9;Comercio internacional;N
+
+//Catalogo Tipos Uso
+*-TU;1;Nuevo;N
+*-TU;2;Usado;N
+*-TU;3;No Aplica;N
+
+//Catalogo Tipos Generador
+*-TG;1;Generador;N
+*-TG;2;No Generador;N
+*-TG;3;No Aplica;N
+
+//Catalogo Tipos Cliente
+*-TC;1;Nuevo;N
+*-TC;2;Actual;N
+*-TC;3;No Aplica;N
+
+//Catalogo Tipos Moneda
+*-TM;1;Colón;N
+*-TM;2;Dolar;N
+
+//Catalogo Tipos Tasa
+*-TT;1;Tasa variable;N
+*-TT;2;Tasa fija;N
+*-TT;3;Tasa fija-variable;N
+*-TT;4;Tasa variable-fija;N
+*-TT;5;No Aplica;N
+
+//Catalogo Tipo cargo productos crediticios
+*-TCP;1;Formalizacion;N
+*-TCP;2;Administrativo;N
+*-TCP;34;Capitalizacion;N
+*-TCP;35;Social;N
+
+//Catalogo Tipos Cargos medios electronicos
+*-TCM;1;TasaNominal;N
+*-TCM;2;TasaMoratoria;N
+*-TCM;3;Anualidad;N
+*-TCM;4;Renovación;N
+*-TCM;5;Adicional;N
+*-TCM;6;Formalización;N
+*-TCM;7;Administrativo;N
+*-TCM;8;SeguroVida;N
+*-TCM;9;SeguroDesempleo;N
+*-TCM;10;SeguroProteccion;N
+*-TCM;11;Sobregiro;N
+*-TCM;12;Deterioro;N
+*-TCM;13;Pérdida;N
+*-TCM;14;Clave;N
+*-TCM;15;Recibo;N
+*-TCM;16;Estado;N
+*-TCM;17;Internacional;N
+*-TCM;18;Avance;N
+*-TCM;19;Reactivación;N
+*-TCM;20;Atraso;N
+*-TCM;21;Reclamo;N
+*-TCM;22;SinTarjeta;N
+*-TCM;23;Retiro;N
+*-TCM;24;Documento;N
+*-TCM;25;Incobrable;N
+*-TCM;26;Cheque;N
+*-TCM;27;Exceso;N
+*-TCM;28;Comunicado;N
+*-TCM;29;Sinpe;N
+*-TCM;30;Red;N
+*-TCM;31;NoRed;N
+
+//Catalogo Tipo Valor Cargo
+*-TVC;1;Porcentaje;N
+*-TVC;2;Monto;N
+
+//Catalogo Tipo Medio Electronico
+*-TME;1;Tarjeta de crédito;N
+*-TME;2;Tarjeta de débito;N
+*-TME;3;Operaciones mediante móvil o internet;N
+
+//Catalogo Marca Medio
+*-TTE;1;Visa;N
+*-TTE;2;MasterCard;N
+*-TTE;3;NA;N
+
+//Catalogo Cobertura medio de pago
+*-TCO;1;Local;N
+*-TCO;2;Internacional;N
+*-TCO;3;Local e Internacional;N
+
+
+
+

@@ -1,0 +1,15 @@
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\Datos.dll.config
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\Datos.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\Datos.pdb
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\EntityFramework.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\EntityFramework.xml
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\obj\Debug\Datos.dll
+C:\Users\cgonzalez\Documents\CoopeBank\CoopeBank\Datos\obj\Debug\Datos.pdb
